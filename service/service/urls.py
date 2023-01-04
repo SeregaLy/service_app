@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-router = routers.DefaltRourer()
+router = routers.DefaultRouter()
 router.register(r'api/subscriptions', SubscriptionView)
 
 urlpatterns += router.urls
