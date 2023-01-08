@@ -11,6 +11,6 @@ class SubscriptionView(ReadOnlyModelViewSet):
         Prefetch('client',
                  queryset=Client.objects.all().select_related('user').only(
                      'company_name',
-                     'eser_email'))
+                     'user_email'))
     )
     serializer_class = SubscriptionSerializer
